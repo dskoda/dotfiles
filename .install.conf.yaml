@@ -17,6 +17,7 @@
     ~/.bashrc: bash/bashrc
     ~/.fzf: fzf
     ~/.fzf.bash: bash/fzf.bash
+    ~/.zshrc: zshrc
     ~/.jupyter/nbconfig/notebook.json: jupyter/notebook.json
     ~/.local/share/jupyter/nbextensions: jupyter/nbextensions
     ~/Library/Jupyter/nbextensions: jupyter/nbextensions
