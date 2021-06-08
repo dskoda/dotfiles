@@ -117,16 +117,21 @@ function start_agent {
 }
 
 # Source SSH settings, if applicable
-
-if [ -f "${SSH_ENV}" ]; then
-     . "${SSH_ENV}" > /dev/null
-     #ps ${SSH_AGENT_PID} doesn't work under cywgin
-     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+function source_ssh {
+    if [ -f "${SSH_ENV}" ]; then
+         . "${SSH_ENV}" > /dev/null
+         #ps ${SSH_AGENT_PID} doesn't work under cywgin
+         ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+             start_agent;
+         }
+    else
          start_agent;
-     }
-else
-     start_agent;
-fi
+    fi
+}
+
+case $- in
+  *i*) source_ssh;;
+esac
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -145,3 +150,5 @@ fi
 #fi
 #unset __conda_setup
 ## <<< conda initialize <<<
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
