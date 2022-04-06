@@ -14,6 +14,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tmhedberg/SimpylFold'
 Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
+Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
 
 call plug#end()
 
@@ -177,3 +178,7 @@ set rtp+=~/.fzf
 map <Leader>f :Files<CR>
 map <Leader>b :Buffers<CR>
 map <Leader>g :GFiles<CR>
+
+" Black neovim
+nnoremap <buffer><silent> <Leader>k <cmd>call Black()<cr>
+inoremap <buffer><silent> <Leader>k <cmd>call Black()<cr>
