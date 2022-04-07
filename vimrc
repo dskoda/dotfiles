@@ -81,7 +81,7 @@ function! SyntasticCheckHook(errors)
 endfunction
 
 map <Leader>c :SyntasticCheck<CR>
-map <Leader>r :SyntasticReset<CR>
+map <Leader>C :SyntasticReset<CR>
 
 "---------------------
 " Basic editing config
@@ -179,6 +179,5 @@ map <Leader>f :Files<CR>
 map <Leader>b :Buffers<CR>
 map <Leader>g :GFiles<CR>
 
-" Black neovim
-nnoremap <buffer><silent> <Leader>k <cmd>call Black()<cr>
-inoremap <buffer><silent> <Leader>k <cmd>call Black()<cr>
+nnoremap <buffer><silent> <c-k> <cmd>call Black()<cr>
+inoremap <buffer><silent> <c-k> <cmd>call Black()<cr>
