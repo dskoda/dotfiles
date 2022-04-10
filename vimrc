@@ -14,7 +14,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tmhedberg/SimpylFold'
 Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
-Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
+Plug 'psf/black', { 'branch': 'stable' }
 
 call plug#end()
 
@@ -179,5 +179,5 @@ map <Leader>f :Files<CR>
 map <Leader>b :Buffers<CR>
 map <Leader>g :GFiles<CR>
 
-nnoremap <buffer><silent> <c-k> <cmd>call Black()<cr>
-inoremap <buffer><silent> <c-k> <cmd>call Black()<cr>
+" Black neovim
+nnoremap <c-k> :Black<CR>
