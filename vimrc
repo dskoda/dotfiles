@@ -180,4 +180,4 @@ map <Leader>b :Buffers<CR>
 map <Leader>g :GFiles<CR>
 
 " Black neovim
-nnoremap <c-k> :Black<CR>
+nnoremap <Leader>k :Black<CR>
