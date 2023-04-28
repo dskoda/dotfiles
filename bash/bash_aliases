@@ -26,6 +26,7 @@ alias v="vim"
 alias p="python3"
 alias ptest="p -m unittest"
 alias unittest="p -m unittest discover"
+alias pcov="p -m coverage"
 
 alias canceljobs="awk '{print \$1}' | xargs scancel"
 
