@@ -9,27 +9,13 @@ else
 fi
 export EDITOR="$VISUAL"
 
-# Personal projects
-export PROJECTSDIR="$HOME/projects"
-export HTVSDIR="$PROJECTSDIR/htvs"
-export DJANGOCHEMDIR="$HTVSDIR/djangochem"
-export CHEMCONFIGS="$HTVSDIR/chemconfigs"
-export VOIDDIR="$PROJECTSDIR/VOID"
-export CLUSTER="$HOME/mnt/cluster"
-export LOGDIR="$HOME/logs"
-export NFF="$PROJECTSDIR/NeuralForceField"
-export GULPY="$PROJECTSDIR/gulpy"
-export ROBUST="$PROJECTSDIR/robust"
-export PYKITE="$PROJECTSDIR/pykite"
-export confgenpath="$HTVSDIR/confgen"
-
 export DSKRC="$PROJECTSDIR/dskrc"
 export DSK_PYTHON="$DSKRC/python/inits"
 
-export PYTHONPATH=$HTVSDIR:$DJANGOCHEMDIR:$ROBUST:$GULPY:$NFF:$VOIDDIR:$PYKITE:$DSK_PYTHON:$PROJECTSDIR
+export PYTHONPATH=$DSK_PYTHON
 export MPLCONFIGDIR="$HOME/.config/matplotlib"
 
-export PACKAGESDIR="$HOME/packages"
+export PACKAGESDIR="$HOME/pkg"
 export DOTFILES="$PROJECTSDIR/dotfiles"
 export DOTLOCAL="$PROJECTSDIR/dotfiles_local"
 
