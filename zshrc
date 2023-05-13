@@ -117,5 +117,6 @@ source $ZSH/oh-my-zsh.sh
 #[ -e ~/.bash_exports ] && . ~/.bash_exports
 [ -e ~/.bash_aliases ] && . ~/.bash_aliases
 [ -e ~/.bashrc_local ] && . ~/.bashrc_local
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
