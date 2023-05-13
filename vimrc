@@ -66,13 +66,20 @@ let g:jedi#popup_on_dot = 0
 " ALE syntax checker
 "---------------------
 
-let g:ale_linters = {'python': ['pylint']}
+let g:ale_linters = {'python': ['flake8']}
+let b:ale_fixers = {'python': ['black']}
 
 let g:ale_python_executable='python3'
-let g:ale_python_pylint_use_global=1
+let g:ale_python_flake8_use_global=1
 
 " Disable whitespace warnings
 let g:ale_warn_about_trailing_whitespace = 0
+"
+" Fix files when saving them
+let g:ale_fix_on_save = 1
+
+nmap <silent> <C-[> <Plug>(ale_previous_wrap)
+nmap <silent> <C-]> <Plug>(ale_next_wrap)
 
 "---------------------
 " Basic editing config
