@@ -6,7 +6,6 @@ call plug#begin('~/.vim/plugged')
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
-Plug 'vim-syntastic/syntastic'
 Plug 'danilo-augusto/vim-afterglow'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -15,6 +14,7 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
 Plug 'psf/black', { 'branch': 'stable' }
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -59,29 +59,20 @@ let g:SimpylFold_docstring_preview = 1
 let g:jedi#use_splits_not_buffers = "right"
 let g:jedi#popup_on_dot = 0
 
+"map <Leader>c :SyntasticCheck<CR>
+"map <Leader>C :SyntasticReset<CR>
+"
 "---------------------
-" Syntastic Plugin
+" ALE syntax checker
 "---------------------
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+let g:ale_linters = {'python': ['pylint']}
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = {'mode': 'passive'}
+let g:ale_python_executable='python3'
+let g:ale_python_pylint_use_global=1
 
-" see :h syntastic-loclist-callback
-function! SyntasticCheckHook(errors)
-    if !empty(a:errors)
-        let g:syntastic_loc_list_height = min([len(a:errors), 8])
-    endif
-endfunction
-
-map <Leader>c :SyntasticCheck<CR>
-map <Leader>C :SyntasticReset<CR>
+" Disable whitespace warnings
+let g:ale_warn_about_trailing_whitespace = 0
 
 "---------------------
 " Basic editing config
