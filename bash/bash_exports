@@ -18,5 +18,8 @@ export MPLCONFIGDIR="$HOME/.config/matplotlib"
 export PACKAGESDIR="$HOME/pkg"
 export DOTFILES="$PROJECTSDIR/dotfiles"
 export DOTLOCAL="$PROJECTSDIR/dotfiles_local"
+export HOSTALIASES=$HOME/.hosts
 
 export RUN_BASH_EXPORTS="yes"
+
+export WORKSPACE="/usr/workspace/dskoda"
