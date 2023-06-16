@@ -21,5 +21,3 @@ export DOTLOCAL="$PROJECTSDIR/dotfiles_local"
 export HOSTALIASES=$HOME/.hosts
 
 export RUN_BASH_EXPORTS="yes"
-
-export WORKSPACE="/usr/workspace/dskoda"

@@ -115,9 +115,11 @@ set smartcase
 set wildmode=longest,list,full
 set wildmenu
 set mouse+=a " enable mouse mode (scrolling, selection, etc)
-if &term =~ '^screen'
-    " tmux knows the extended mouse mode
-    set ttymouse=xterm2
+if !has('nvim')
+    if &term =~ '^screen'
+        " tmux knows the extended mouse mode
+        set ttymouse=xterm2
+    endif
 endif
 
 "--------------------
