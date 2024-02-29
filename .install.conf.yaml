@@ -16,7 +16,6 @@
     ~/.bash_aliases: bash/bash_aliases
     ~/.bashrc: bash/bashrc
     ~/.fzf: fzf
-    ~/.fzf.bash: bash/fzf.bash
     ~/.zshrc: zshrc
     ~/.ripgreprc: ripgreprc
     ~/.jupyter/nbconfig/notebook.json: jupyter/notebook.json

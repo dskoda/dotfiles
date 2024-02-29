@@ -118,6 +118,6 @@ export LC_ALL=en_US.UTF-8
 #[ -e ~/.bash_exports ] && . ~/.bash_exports
 [ -e ~/.bash_aliases ] && . ~/.bash_aliases
 [ -e ~/.bashrc_local ] && . ~/.bashrc_local
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
