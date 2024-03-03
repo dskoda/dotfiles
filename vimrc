@@ -54,6 +54,13 @@ let g:SimpylFold_docstring_preview = 1
 
 
 "---------------------
+" Anaconda
+"---------------------
+if has('nvim') && !empty($CONDA_PREFIX)
+  let g:python3_host_prog = $CONDA_PREFIX . '/bin/python'
+endif
+
+"---------------------
 " Jedi-VIM
 "---------------------
 let g:jedi#use_splits_not_buffers = "right"
