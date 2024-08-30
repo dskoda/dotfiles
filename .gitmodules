@@ -19,3 +19,6 @@
 [submodule "jupyter/nbextensions/jupyter-vim-binding"]
 	path = jupyter/nbextensions/jupyter-vim-binding
 	url = git@github.com:lambdalisue/jupyter-vim-binding.git
+[submodule "nvim/pack/pasky/start/claude.vim"]
+	path = nvim/pack/pasky/start/claude.vim
+	url = https://github.com/pasky/claude.vim.git
