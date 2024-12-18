@@ -22,3 +22,6 @@
 [submodule "nvim/pack/pasky/start/claude.vim"]
 	path = nvim/pack/pasky/start/claude.vim
 	url = https://github.com/pasky/claude.vim.git
+[submodule "jupyter/nbextensions/RISE"]
+	path = jupyter/nbextensions/RISE
+	url = git@github.com:damianavila/RISE.git

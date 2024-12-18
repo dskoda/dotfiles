@@ -11,6 +11,7 @@
 	ca = commit --amend -v
 	save = commit -a -m "Save"
 	co = checkout
+	cm = commit -a -m
 	di = diff
 	dis = diff --stat
 	diw = diff --color-words
